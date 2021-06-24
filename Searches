@@ -1,0 +1,25 @@
+SELECT @@VERSION
+    ""Display Version""
+    
+SELECT SERVERPROPERTY('EngineEdition');
+        1 = Personal or Desktop Engine
+        2 = Standard
+        3 = Enterprise
+        4 = Express
+        5 = SQL Database
+        6 = SQL Data Warehouse
+        8 = SQL Managed Instance
+
+SELECT * FROM sys.databases;
+SELECT * FROM sys.objects;
+    ""verify the installation and the status of system databases and to check system objects in your database""
+    
+SELECT * FROM sys.dm_os_schedulers where STATUS = 'VISIBLE ONLINE';
+    ""Verify that all schedulers are online and you're detecting the expected available CPUs""
+    
+SELECT * FROM sys.dm_user_db_resource_governance;
+    ""Service Level Objective (SLO) which states the deployment option, service tier, hardware, and compute amount""
+    
+SELECT * FROM sys.dm_exec_requests;
+    ""view currently running SQL requests""
+    
